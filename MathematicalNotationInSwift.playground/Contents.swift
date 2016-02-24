@@ -39,3 +39,24 @@ func dot (a:[Int],b:[Int]) ->[Int] {
 
 
 var d = dot(k2, b: j2)
+
+var kCross = [0,1,0]
+var jCross = [1,0,0]
+
+func cross(a:[Int], b:[Int]) -> [NSArray] {
+    
+    let ax = a[0]
+    let ay = a[1]
+    let az = a[2]
+    let bx = b[0]
+    let by = b[1]
+    let bz = b[2]
+    
+    let rx = [ay * bz - az * by]
+    let ry = [az * bx - ax * bz]
+    let rz = [ax * by - ay * bx]
+    
+    return [rx, ry, rz]
+}
+
+cross(kCross, b: jCross)
