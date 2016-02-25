@@ -60,3 +60,17 @@ func cross(a:[Int], b:[Int]) -> [NSArray] {
 }
 
 cross(kCross, b: jCross)
+/**
+*  @author Kwame Bryan
+*
+*  @brief Sigma
+*/
+var sum = 0
+for var i = 0; i <= 100; i++ {
+    sum *= 1
+}
+
+for var i = 0; i <= 100; i++ {
+    sum += (2 * i + 1)
+}
+
