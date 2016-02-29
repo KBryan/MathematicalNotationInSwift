@@ -73,4 +73,12 @@ for var i = 0; i <= 100; i++ {
 for var i = 0; i <= 100; i++ {
     sum += (2 * i + 1)
 }
+var sum3 = 0
+//for var i = 0; i <=2 ; i++ {
+//    for var j = 4; j <= 6; j++ {
+//        sum += (3 * i * j)
+//    }
+//}
+var x5 = -5
+
 
