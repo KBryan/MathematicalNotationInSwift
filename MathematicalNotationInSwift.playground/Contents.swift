@@ -119,7 +119,13 @@ func length(vec:NSArray) -> Double {
 
 length(euclideanNorm)
 
-func normalize(vec:NSArray)
+func normalize(vec:NSArray) -> Void {
+    /**
+    *  @author Kwame Bryan
+    *
+    *  @brief Implementation Needed
+    */
+}
 
 
 
