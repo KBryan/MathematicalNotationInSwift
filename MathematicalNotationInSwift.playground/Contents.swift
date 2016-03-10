@@ -1,6 +1,8 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
+import Foundation
+import Darwin
 
 var str = "Hello, playground"
 
@@ -80,5 +82,56 @@ var sum3 = 0
 //    }
 //}
 var x5 = -5
+
+/**
+*  @author Kwame Bryan
+*
+*  @brief Sigma Pi 
+*   The capital Pi or "Big Pi" is very similar to Sigma, except we are using multiplication to find the product of a sequence of values.
+*/
+var sigmaValue = 1
+for var i = 1; i < 6; i++ {
+    sigmaValue *= i
+}
+/**
+*  @author Kwame Bryan
+*
+*  @brief Absolute Value
+*/
+
+var absoluteX = -5
+//var absoluteResult = Math.abs(absoluteX)
+/**
+*  @author Kwame Bryan
+*
+*  @brief Euclidean Norm 
+*  For a vector v, ‖v‖ is the Euclidean norm of v. It is also referred to as the "magnitude" or "length" of a vector.
+*/
+var euclideanNorm = [0, 4, -3]
+
+func length(vec:NSArray) -> Double {
+    let x = vec[0]
+    let y = vec[1]
+    let z = vec[2]
+    
+    return 1.2//sqrt((x * x) + (y * y) + (z * z))
+}
+
+length(euclideanNorm)
+
+func normalize(vec:NSArray)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
