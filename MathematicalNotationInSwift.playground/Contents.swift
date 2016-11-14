@@ -4,10 +4,8 @@ import UIKit
 import Foundation
 import Darwin
 
-var str = "Hello, playground"
-
 var f = { (k:Int, j:Int) -> () in
-    var sum = 2 * k * j
+    let sum = 2 * k * j
     print("\(sum)")
 }
 
@@ -28,8 +26,8 @@ func multiplyScalar(a:[Int], scalar:Int) -> [Int] {
     return [a[0] * scalar, a[1] * scalar]
 }
 
-var tmp = multiply(k, b: j)
-var result = multiplyScalar(tmp, scalar: s )
+var tmp = multiply(a: k, b: j)
+var result = multiplyScalar(a: tmp, scalar: s )
 
 var k2 = [0,1,0]
 var j2 = [1,0,0]
@@ -40,7 +38,7 @@ func dot (a:[Int],b:[Int]) ->[Int] {
 }
 
 
-var d = dot(k2, b: j2)
+var d = dot(a: k2, b: j2)
 
 var kCross = [0,1,0]
 var jCross = [1,0,0]
@@ -58,21 +56,21 @@ func cross(a:[Int], b:[Int]) -> [NSArray] {
     let ry = [az * bx - ax * bz]
     let rz = [ax * by - ay * bx]
     
-    return [rx, ry, rz]
+    return [rx as NSArray, ry as NSArray, rz as NSArray]
 }
 
-cross(kCross, b: jCross)
+cross(a: kCross, b: jCross)
 /**
 *  @author Kwame Bryan
 *
 *  @brief Sigma
 */
 var sum = 0
-for var i = 0; i <= 100; i++ {
+for  i in 0..<100 {
     sum *= 1
 }
 
-for var i = 0; i <= 100; i++ {
+for i in 0..<100 {
     sum += (2 * i + 1)
 }
 var sum3 = 0
@@ -90,7 +88,7 @@ var x5 = -5
 *   The capital Pi or "Big Pi" is very similar to Sigma, except we are using multiplication to find the product of a sequence of values.
 */
 var sigmaValue = 1
-for var i = 1; i < 6; i++ {
+for i in 0..<6 {
     sigmaValue *= i
 }
 /**
@@ -110,14 +108,14 @@ var absoluteX = -5
 var euclideanNorm = [0, 4, -3]
 
 func length(vec:NSArray) -> Double {
-    let x = vec[0]
-    let y = vec[1]
-    let z = vec[2]
+    _ = vec[0]
+    _ = vec[1]
+    _ = vec[2]
     
     return 1.2//sqrt((x * x) + (y * y) + (z * z))
 }
 
-length(euclideanNorm)
+length(vec: euclideanNorm as NSArray)
 
 func normalize(vec:NSArray) -> Void {
     /**
